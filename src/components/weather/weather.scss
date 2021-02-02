@@ -1,0 +1,22 @@
+@import "../../styles/";
+
+.weather-container {
+  width: 100%;
+  padding: 1rem;
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid $color-black;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-white;
+  }
+}

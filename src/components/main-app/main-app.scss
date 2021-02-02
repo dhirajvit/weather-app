@@ -1,0 +1,49 @@
+@import "../../styles/";
+.app-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  justify-items: center;
+  @include respond(tab-port) {
+    width: 100%;
+    margin: 0;
+  }
+  &__header {
+    flex: 0 0 2rem;
+    background-color: $color-lightgreen;
+    font-size: 3rem;
+    @include centeralign;
+  }
+
+  &__screen {
+    flex-grow: 1;
+    background-color: $color-secondary;
+  }
+}
+
+.screen-container {
+  display: flex;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  &__sidebar {
+    position: relative;
+    @include centeralign;
+    font-size: 2rem;
+    flex: 0 0 20rem;
+    @include respond(tab-port) {
+      font-size: 2rem;
+      flex: 0 0 5rem;
+    }
+    background-color: $color-darkgreen;
+
+    color: $color-white;
+  }
+  &__main {
+    @include centeralign;
+    flex: 1 1 auto;
+  }
+}
